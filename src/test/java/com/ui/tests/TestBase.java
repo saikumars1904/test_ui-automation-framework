@@ -22,7 +22,7 @@ public class TestBase {
     private boolean isLambdaTest;
     @Parameters({"browser","isLambdaTest","isHeadLess"})
     @BeforeMethod(description = "Load the homepage of the website")
-    public void setUp(@Optional("chrome")String browser, @Optional("false") boolean isLambdaTest, @Optional("true") boolean isHeadLess, ITestResult result){
+    public void setUp(@Optional("chrome")String browser, @Optional("false") boolean isLambdaTest, @Optional("false") boolean isHeadLess, ITestResult result){
         WebDriver lambdaDriver;
         this.isLambdaTest=isLambdaTest;
         if (isLambdaTest){
@@ -48,6 +48,6 @@ public class TestBase {
         else {
             homePage.quitBrowser();
         }
-
     }
+
 }

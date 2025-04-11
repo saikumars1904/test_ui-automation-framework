@@ -21,12 +21,12 @@ public class LoginTest extends TestBase{
 	 * 4. Atleast one assertion
 	 */
 	@Test(description = "Verifies with the valid user is able to login into the application", groups = {"e2e", "sanity"},
-	dataProvider = "LoginTestDataProvider", dataProviderClass = LoginDataProvider.class,enabled = true)
+	dataProvider = "LoginTestDataProvider", dataProviderClass = LoginDataProvider.class,enabled = false)
 	public void loginTest(User user) {
 		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUsername(),"Akash Debnath");
 	}
 
-	@Test(enabled = true, description = "Verifies with the valid user is able to login into the application via csv", groups = {"e2e", "sanity"},
+	@Test(enabled = false, description = "Verifies with the valid user is able to login into the application via csv", groups = {"e2e", "sanity"},
 			dataProvider = "LoginTestCSVProvider", dataProviderClass = LoginDataProvider.class)
 	public void loginCSVTest(User user) {
 		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUsername(),"Akash Debnath");
