@@ -1,12 +1,14 @@
 package com.ui.tests;
 
+import com.ui.listeners.TestListeners;
 import com.ui.pages.SearchResultPage;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.constants.Size.M;
 import static org.testng.Assert.assertTrue;
-
+@Listeners({TestListeners.class})
 public class ProductCheckOutTest extends TestBase{
     private SearchResultPage searchResultPage;
     private static final String SEARCH_TERM = "Printed summer dress";
