@@ -93,14 +93,14 @@ mvn clean install
 **Local Execution**
 
 ```bash
-mvn test -X -Dbrowser=chrome -DisLambdaTest=false -disHeadless=false
+mvn test -X -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=false
 
 ```
 
 **LambdaTest execution**
 
 ```bash
-mvn test -X -Dbrowser=chrome -DisLambdaTest=true -disHeadless=false
+mvn test -X -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false
 
 ```
 🔹 Headless execution can be enabled/disabled with -DisHeadless=true/false.
