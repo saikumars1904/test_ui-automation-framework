@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Automation practice test suite" verbose="1">
+    <listeners>
+        <listener class-name="com.ui.listeners.AnnotationsTransformerClass"/>
+    </listeners>
     <test name="UI Automation test" parallel="methods" thread-count="5" >
         <parameter name="browser" value="${browser}"/>
         <parameter name="isLambdaTest" value="${isLambdaTest}"/>
